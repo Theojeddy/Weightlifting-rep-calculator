@@ -1,18 +1,27 @@
+import Calculator from "../Pages/Calculator";
+import Home from "../Pages/Home";
 import "./App.css";
-import logo1 from './RepWise-logo.svg'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+
+
+
 function App() {
+  const [title, setTitle] = useState("Home")
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img
-          src={logo1}
-          alt="Logo"
-          className="logo-image"
-          
-        />
-        <h1>Weightlifting Rep Calculator</h1>
-        <p>This is a work in progress. Please check back later.</p>
-      </header>
+      <BrowserRouter>
+        
+        <Routes>
+          <Route path="/" element={<Home title={title} setTitle={setTitle} />} />
+          <Route
+            path="/Calculator"
+            element={<Calculator title={title} setTitle={setTitle} />}
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
