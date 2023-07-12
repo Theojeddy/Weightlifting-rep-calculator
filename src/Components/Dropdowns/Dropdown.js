@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function Dropdowns() {
     const [selectedExercises, setSelectedExercises] = useState(null);
-    const [value, setValue] = useState(0);
+    const [weight, setWeight] = useState("");
     const [selectedReps, setSelectedReps] = useState(null);
     const Exercises = [
       { name: "Squat" },
@@ -26,13 +26,28 @@ export default function Dropdowns() {
       setSelectedExercises(event.target.value);
     };
     const handleWeightChange = (event) => {
-      const parsedValue = parseInt(event.target.value); 
-      setValue(parsedValue);
+      const parsedWeight = parseInt(event.target.value); 
+      setWeight(parsedWeight);
     };
     const handleRepsChange = (event) => {
     const parsedReps= parseInt(event.target.value);
       setSelectedReps(parsedReps);
-      
+    };
+    const handleSubmit = (event) => {
+      event.preventDefault();
+
+      const formData = {
+        exercise: selectedExercises,
+        weight: weight,
+        reps: selectedReps,
+      };
+
+      console.log(formData); // You can do further processing with the form data
+
+      // Reset the form fields
+      setWeight("");
+      setSelectedExercises("");
+      setSelectedReps("");
     };
     return (
       <div>
@@ -50,9 +65,9 @@ export default function Dropdowns() {
         <div className="Weight">
           <input
             type="number"
-            value={value}
+            value={weight}
             onChange={handleWeightChange}
-            placeholder="Enter a number"
+            placeholder="Enter Weight in kg"
           ></input>
           
         </div>
@@ -66,6 +81,12 @@ export default function Dropdowns() {
               </option>
             ))}
           </select>
+        </div>
+        <div className="Sumbit">
+        <button onClick={handleSubmit}>
+          Submit
+        </button>
+
         </div>
       </div>
     );};
