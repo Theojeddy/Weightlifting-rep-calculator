@@ -1,5 +1,5 @@
 import Dropdowns from "../Components/Dropdowns/Dropdown";
-import HeaderLogo from "../Components/Header/HeaderLogo";
+import Header from "../Components/Header/Header";
 import React, { useEffect } from "react";
 
 export default function Calculator({ title, setTitle }) {
@@ -9,9 +9,9 @@ export default function Calculator({ title, setTitle }) {
 
   return (
     <div>
-    <HeaderLogo/>
+      <Header />
       <h1>{title}</h1>
-      <Dropdowns/>
+      <Dropdowns />
     </div>
   );
 }

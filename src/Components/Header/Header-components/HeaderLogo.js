@@ -1,5 +1,5 @@
-import logo1 from "../../App/RepWise-logo.svg";
-import './Header.css'
+import logo1 from "../../../App/RepWise-logo.svg";
+import '../../Header/Header.css'
 
 export default function HeaderLogo(){
 return (
