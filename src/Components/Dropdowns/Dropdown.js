@@ -15,7 +15,7 @@ export default function Dropdowns({ completedForm, setCompletedForm }) {
   // set the value for exercises
   const Exercises = [
     { name: "Squat" },
-    { name: "Bench" },
+    { name: "Bench Press" },
     { name: "Deadlift" },
   ];
 // set the values for reps
