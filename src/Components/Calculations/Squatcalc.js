@@ -1,15 +1,33 @@
 import React from "react";
 
 export default function SquatCalc({ completed }) {
-  const { exercise, weight, reps } = completed;
+  // Destructure the 'completed' prop
+  const exercise = completed.exercise;
+  const weight = completed.weight;
+  const reps = completed.reps;
 
+  // Function to generate the training list
   const generateTrainingList = () => {
     const trainingList = [];
 
+    // Loop through rep ranges from 1 to 10
     for (let i = 1; i <= 10; i++) {
-      const percentage = getPercentageFromRepRange(i);
-      const currentWeight = Math.round(weight * percentage);
+      let percentage;
+      let currentWeight;
 
+      // Calculate percentage adjustment based on rep range
+      if (i < reps) {
+        percentage = 100 + (reps - i) * 2;
+      } else if (i > reps) {
+        percentage = 100 - (i - reps) * 2;
+      } else {
+        percentage = 100;
+      }
+
+      // Calculate the weight for the current rep range
+      currentWeight = Math.round((weight * percentage) / 100);
+
+      // Add the rep range and weight to the training list
       trainingList.push({
         reps: i,
         weight: currentWeight,
@@ -19,22 +37,10 @@ export default function SquatCalc({ completed }) {
     return trainingList;
   };
 
-  const getPercentageFromRepRange = (reps) => {
-    if (reps === 2) return 0.92; // Approximately 92% of 1RM
-    if (reps === 3) return 0.88; // Approximately 88% of 1RM
-    if (reps === 4) return 0.85; // Approximately 85% of 1RM
-    if (reps === 5) return 0.82; // Approximately 82% of 1RM
-    if (reps === 6) return 0.8; // Approximately 80% of 1RM
-    if (reps === 7) return 0.78; // Approximately 78% of 1RM
-    if (reps === 8) return 0.76; // Approximately 76% of 1RM
-    if (reps === 9) return 0.75; // Approximately 75% of 1RM
-    if (reps === 10) return 0.73; // Approximately 73% of 1RM
-
-    return 1; // Default to 100% of 1RM
-  };
-
+  // Generate the training list
   const trainingList = generateTrainingList();
 
+  // Render the component
   return (
     <div>
       <h1>Exercise: {exercise}</h1>
