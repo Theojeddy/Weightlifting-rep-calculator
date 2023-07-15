@@ -1,5 +1,6 @@
 // import usesate
 import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.css";
 
 
 // export function with props of completed form and setcompleted form from calculator.js
@@ -66,7 +67,7 @@ export default function Dropdowns({ completedForm, setCompletedForm }) {
 
   return (
     <div>
-    {/* dropdwon for exercise */}
+      {/* dropdwon for exercise */}
       <div className="exercise">
         <select value={selectedExercises} onChange={handleExerciseChange}>
           <option value="">Choose an Exercise</option>
@@ -97,9 +98,12 @@ export default function Dropdowns({ completedForm, setCompletedForm }) {
           ))}
         </select>
       </div>
+
       {/* button to trigger the form data */}
-      <div className="Submit">
-        <button onClick={handleSubmit}>Submit</button>
+      <div>
+        <button className="btn btn-primary" onClick={handleSubmit}>
+          Submit
+        </button>
       </div>
     </div>
   );
