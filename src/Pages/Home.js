@@ -10,14 +10,29 @@ export default function Home({ title, setTitle }) {
   }, [setTitle]);
 
   return (
-    <div>
-      <HeaderLogo />
-      <h1>{title}</h1>
-      <div>
-        <Link to="/Calculator">
-          <button className="btn btn-primary">Calculator</button>
-        </Link>
+    <div className="container-fluid vw4">
+      <div className="row">
+        <div className="col mt-4 text-start">
+          <div style={{ width: "10vw" }}>
+            <HeaderLogo />
+          </div>
+        </div>
+
+        <div
+          className="col mt-4
+         text-center "
+        >
+          <h1>{title}</h1>
+        </div>
+        <div className="col mt-4 "></div>
+      </div>
+
+      <div className="col text-center">
+        <div>
+          <Link to="/Calculator">
+            <button className="btn btn-primary">Calculator</button>
+          </Link>
+        </div>
       </div>
     </div>
-  );
-}
+  );};
