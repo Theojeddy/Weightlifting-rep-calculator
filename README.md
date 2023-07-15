@@ -2,6 +2,8 @@
 
 'Train Smart, Dominate Your Workout'
 
+RepWise is a web app designed to be a space where you can meet all of your workout needs, from calculating reps and sets to planning and tracking your workouts. RepWise has been designed and written by Theo Eddy.
+
 ## Tech stack
 - React
 - Javascript
