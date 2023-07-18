@@ -43,12 +43,12 @@ export default function DeadliftCalc({ completed }) {
 
   // Render the component
   return (
-    <div>
+    <div className="text-center">
       <h1>Exercise: {exercise}</h1>
       <h1>Weight: {weight}</h1>
       <h1>Reps: {reps}</h1>
       <h2>Training List:</h2>
-      <ul>
+      <ul className="list-unstyled">
         {trainingList.map((item, index) => (
           <li key={index}>
             Reps: {item.reps}, Weight: {item.weight}kg

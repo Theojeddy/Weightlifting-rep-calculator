@@ -1,7 +1,8 @@
 //import components dropdowns, header and calculations
 
 import Dropdowns from "../Components/Dropdowns/Dropdown";
-import Header from "../Components/Header/Header";
+import HeaderLogo from "../Components/Header/HeaderLogo";
+import HeaderHomeButton from "../Components/Header/HomeButton";
 import Calculations from "../Components/Calculations/Calculations";
 // import useEffect and useState
 import React, { useEffect, useState } from "react";
@@ -20,17 +21,35 @@ export default function Calculator({ title, setTitle }) {
 console.log(completedForm);
   
   return (
-    <div>
-      <Header />
-      <h1>{title}</h1>
+    <div className="container-fluid vw4">
+      <div className="row">
+        <div className="col mt-4 text-start">
+          <div style={{ width: "10vw" }}>
+            <HeaderLogo />
+          </div>
+        </div>
+        <div
+          className="col mt-4
+         text-center "
+        >
+          <h1>{title}</h1>
+        </div>
+        <div className="col mt-4 text-end">
+          <HeaderHomeButton />
+        </div>
+      </div>
+      {/* end for header row */}
+
+
+      {/* start of page content */}
       {/* pass down props of completed form and handle form submit */}
+
       <Dropdowns
         completed={completedForm}
         setCompletedForm={handleFormSubmit}
       />
       {/* pass down the updated props of completed form */}
-      <Calculations
-      completed={completedForm}/>
+      <Calculations completed={completedForm} />
     </div>
   );
 }

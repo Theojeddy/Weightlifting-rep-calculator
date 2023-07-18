@@ -1,8 +1,7 @@
-import HeaderLogo from "../Components/Header/Header-components/HeaderLogo";
+import HeaderLogo from "../Components/Header/HeaderLogo";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
-
 
 export default function Home({ title, setTitle }) {
   useEffect(() => {
@@ -35,4 +34,5 @@ export default function Home({ title, setTitle }) {
         </div>
       </div>
     </div>
-  );};
+  );
+}

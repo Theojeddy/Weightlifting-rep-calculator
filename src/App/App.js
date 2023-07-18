@@ -11,17 +11,21 @@ function App() {
 
   
   return (
-    <div className="App">
-      <BrowserRouter>
-        
-        <Routes>
-          <Route path="/" element={<Home title={title} setTitle={setTitle} />} />
-          <Route
-            path="/Calculator"
-            element={<Calculator title={title} setTitle={setTitle} />}
-          />
-        </Routes>
-      </BrowserRouter>
+    <div className="container-fluid custom-container">
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={<Home title={title} setTitle={setTitle} />}
+            />
+            <Route
+              path="/Calculator"
+              element={<Calculator title={title} setTitle={setTitle} />}
+            />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }

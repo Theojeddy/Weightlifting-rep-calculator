@@ -66,44 +66,54 @@ export default function Dropdowns({ completedForm, setCompletedForm }) {
   };
 
   return (
-    <div>
-      {/* dropdwon for exercise */}
-      <div className="exercise">
-        <select value={selectedExercises} onChange={handleExerciseChange}>
-          <option value="">Choose an Exercise</option>
-          {Exercises.map((exercise, index) => (
-            <option key={index} value={exercise.name}>
-              {exercise.name}
-            </option>
-          ))}
-        </select>
-      </div>
-      {/* input field for weight */}
-      <div className="Weight">
-        <input
-          type="number"
-          value={weight}
-          onChange={handleWeightChange}
-          placeholder="Enter Weight in kg"
-        />
-      </div>
-      {/* dropdwon for the number of reps  */}
-      <div className="Reps">
-        <select value={selectedReps} onChange={handleRepsChange}>
-          <option value="">Number of Reps</option>
-          {Reps.map((rep, index) => (
-            <option key={index} value={rep.name}>
-              {rep.name}
-            </option>
-          ))}
-        </select>
+    <div className="container-fluid">
+      <div className="row mt-4">
+        {/* dropdown for exercise */}
+        <div className="col mt-4 text-center">
+          <div className="exercise">
+            <select value={selectedExercises} onChange={handleExerciseChange}>
+              <option value="">Choose an Exercise</option>
+              {Exercises.map((exercise, index) => (
+                <option key={index} value={exercise.name}>
+                  {exercise.name}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+        {/* input field for weight */}
+        <div className="col mt-4 text-center">
+          <div className="Weight">
+            <input
+              type="number"
+              value={weight}
+              onChange={handleWeightChange}
+              placeholder="Enter Weight in kg"
+            />
+          </div>
+        </div>
+        {/* dropdwon for the number of reps  */}
+        <div className="col mt-4 text-center">
+          <div className="Reps">
+            <select value={selectedReps} onChange={handleRepsChange}>
+              <option value="">Number of Reps</option>
+              {Reps.map((rep, index) => (
+                <option key={index} value={rep.name}>
+                  {rep.name}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
       </div>
 
       {/* button to trigger the form data */}
-      <div>
-        <button className="btn btn-primary" onClick={handleSubmit}>
-          Submit
-        </button>
+      <div className="row mt-4">
+        <div className="col text-center">
+          <button className="btn btn-primary" onClick={handleSubmit}>
+            Submit
+          </button>
+        </div>
       </div>
     </div>
   );

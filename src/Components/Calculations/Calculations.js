@@ -1,6 +1,7 @@
 import BenchPresscalc from "./BenchPresscalc";
 import Deadliftcalc from "./Deadliftcalc";
 import Squatcalc from "./Squatcalc";
+import '../../App/App.css'
 
 export default function Calculations({ completed }) {
   let exercise = completed.exercise;
@@ -13,15 +14,11 @@ export default function Calculations({ completed }) {
   } else if (exercise === "Squat") {
     return <Squatcalc completed={completed} />;
   } else {
-    return <div>Please fill out the form and press submit</div>;
+    return (
+      <div className=" row mt-4">
+        <h4>Please fill out the form and press submit</h4>
+      </div>
+    
+    );
   }
 }
-
-//   return (
-//     <div>
-//       <h1>Exercise: {exercise}</h1>
-//       <h1>Weight: {weight}</h1>
-//       <h1>Reps: {reps}</h1>
-//     </div>
-//   );
-// }

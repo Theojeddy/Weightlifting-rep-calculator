@@ -1,10 +1,11 @@
-import HeaderLogo from "./Header-components/HeaderLogo";
-import HeaderHomeButton from "./Header-components/HomeButton";
+import HeaderLogo from "./HeaderLogo";
+import HeaderHomeButton from "./HomeButton";
 
 export default function Header() {
-    return(
-        <div>
-        <HeaderLogo/>
-        <HeaderHomeButton/>
-        </div>
-    )};
+  return (
+    <div>
+      <HeaderLogo />
+      <HeaderHomeButton />
+    </div>
+  );
+}
