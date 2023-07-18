@@ -26,5 +26,5 @@ Updated 15/07/23
 
 ### Documentation
 
-Open [RepWise Docs](https://docs.google.com/presentation/d/1XAoAmK8CV47ehCCaab2fPBgLsvWUxMdHWdFBWnk0BY8/edit?usp=sharing) to view the accompanying documentation
+Open [Notion Docs](https://theo-eddy.notion.site/RepWise-v1-18d54323270448cb8eddea2038130522?pvs=4) to view the accompanying documentation
 
