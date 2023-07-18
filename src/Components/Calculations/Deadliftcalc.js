@@ -1,4 +1,4 @@
-
+import { Card } from "react-bootstrap";
 import React from "react";
 
 export default function DeadliftCalc({ completed }) {
@@ -48,13 +48,16 @@ export default function DeadliftCalc({ completed }) {
       <h1>Weight: {weight}</h1>
       <h1>Reps: {reps}</h1>
       <h2>Training List:</h2>
-      <ul className="list-unstyled">
+      <div className="d-flex flex-wrap justify-content-center">
         {trainingList.map((item, index) => (
-          <li key={index}>
-            Reps: {item.reps}, Weight: {item.weight}kg
-          </li>
+          <Card key={index} style={{ width: "18rem" }} className="m-2">
+            <Card.Body>
+              <Card.Title>Reps: {item.reps}</Card.Title>
+              <Card.Text>Weight: {item.weight}kg</Card.Text>
+            </Card.Body>
+          </Card>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
