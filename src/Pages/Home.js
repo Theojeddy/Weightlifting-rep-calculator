@@ -37,6 +37,11 @@ export default function Home({ title, setTitle }) {
             <button className="btn btn-primary"> Gym Locator</button>
           </Link>
         </div>
+        <div className="row mt-3">
+          <Link to="/ExerciseSearch">
+            <button className="btn btn-primary"> Exercise Search</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
