@@ -27,9 +27,14 @@ export default function Home({ title, setTitle }) {
       </div>
 
       <div className="col text-center">
-        <div>
+        <div className="row">
           <Link to="/Calculator">
             <button className="btn btn-primary">Calculator</button>
+          </Link>
+        </div>
+        <div className="row mt-3">
+          <Link to="/GymLocator">
+            <button className="btn btn-primary"> Gym Locator</button>
           </Link>
         </div>
       </div>
