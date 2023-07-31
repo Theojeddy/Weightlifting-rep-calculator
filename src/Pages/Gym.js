@@ -32,8 +32,12 @@ export default function GymLocator({ title, setTitle }) {
           <HeaderHomeButton />
         </div>
       </div>
-      
-
+      <div className="row text-center">
+        <div className="col text-center">
+          <h1> This page is currently under maintainance</h1>
+          <HeaderHomeButton />
+        </div>
+      </div>
     </div>
   );
 }
