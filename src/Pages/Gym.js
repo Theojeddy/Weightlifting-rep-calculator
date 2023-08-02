@@ -32,7 +32,7 @@ async function fetchGyms() {
     )}?format=json&limit=1`;
     const geocodeResponse = await axios.get(geocodeUrl);
     if (geocodeResponse.data.length === 0) {
-      setError("Could not find coordinates for the given address");
+      setError("Sorry, I can't find that location, please try again");
       return;
     }
     const { lat, lon } = geocodeResponse.data[0];
@@ -46,7 +46,7 @@ async function fetchGyms() {
     console.log(data);
 
     if (!response.ok) {
-      setError("Something went wrong, try again");
+      setError("Sorry, something went wrong, please try again");
       return;
     }
 
@@ -83,7 +83,7 @@ async function fetchGyms() {
       <div className="row mt-3">
         <input
           type="text"
-          placeholder="Enter location"
+          placeholder="Enter a Location, City, Address or Postcode "
           onChange={(e) => setAddress(e.target.value)}
         />
           
@@ -92,6 +92,10 @@ async function fetchGyms() {
           {" "}
           search{" "}
         </button>
+      </div>
+      <div className="row text-center">
+      {error && <p className="text-danger">{error}</p>}
+    
       </div>
     </div>
   );
