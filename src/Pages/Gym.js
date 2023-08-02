@@ -1,6 +1,6 @@
 //import components dropdowns, header and calculations
 
-
+import axios from "axios";
 import HeaderLogo from "../Components/Header/HeaderLogo";
 import HeaderHomeButton from "../Components/Header/HomeButton";
 
@@ -24,10 +24,23 @@ async function fetchGyms() {
     setError("Please enter a valid address");
     return;
   }
+
   try {
-    const response = await fetch(
-      `https://api.geoapify.com/v2/places?categories=sport.fitness,sport.sports_centre&filter=circle:-2.11334,52.54686,5000&bias=proximity:-2.11334,52.54686&lang=en&limit=20&apiKey=3d1509c62983467a8c576bdff4fc9aa3`
-    );
+    // Geocode the address to obtain latitude and longitude
+    const geocodeUrl = `https://nominatim.openstreetmap.org/search/${encodeURIComponent(
+      address
+    )}?format=json&limit=1`;
+    const geocodeResponse = await axios.get(geocodeUrl);
+    if (geocodeResponse.data.length === 0) {
+      setError("Could not find coordinates for the given address");
+      return;
+    }
+    const { lat, lon } = geocodeResponse.data[0];
+
+    // Use the obtained coordinates in the API request
+    const url = `https://api.geoapify.com/v2/places?categories=sport.fitness,sport.sports_centre&filter=circle:${lon},${lat},5000&bias=proximity:${lon},${lat}&lang=en&limit=20&apiKey=3d1509c62983467a8c576bdff4fc9aa3`;
+
+    const response = await fetch(url);
     const data = await response.json();
 
     console.log(data);
@@ -43,7 +56,7 @@ async function fetchGyms() {
     console.log(data.features[2].properties.name);
     console.log(data.features[3].properties.name);
   } catch (error) {
-    // Handle errors that might occur during fetch or response parsing
+    // Handle errors that might occur during fetch, geocoding, or response parsing
     setError("An error occurred. Please try again later.");
   }
 }
