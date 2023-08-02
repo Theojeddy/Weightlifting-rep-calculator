@@ -80,6 +80,7 @@ async function fetchGyms() {
           <HeaderHomeButton />
         </div>
       </div>
+
       <div className="row mt-3">
         <input
           type="text"

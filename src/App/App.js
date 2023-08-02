@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import GymLocator from "../Pages/Gym";
+import ExerciseSearch from "../Pages/Exercise";
 
 
 
@@ -27,6 +28,10 @@ function App() {
             <Route
               path="/GymLocator"
               element={<GymLocator title={title} setTitle={setTitle} />}
+            />
+            <Route
+              path="/ExerciseSearch"
+              element={<ExerciseSearch title={title} setTitle={setTitle} />}
             />
           </Routes>
         </BrowserRouter>
