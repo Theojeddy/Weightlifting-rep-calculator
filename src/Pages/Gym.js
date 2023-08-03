@@ -87,16 +87,16 @@ export default function GymLocator({ title, setTitle }) {
       </div>
       <div className="row text-center">
         {error && <p className="text-danger">{error}</p>}
-        <h3>{cardsRendered} results found</h3>
+        
         <div className="row">
           {gymData.map((gym, index) =>
             gym.properties.name ? (
               <Card key={index} style={{ width: "18rem" }} className="m-2">
-                <Card.Body>
+                <Card.Body className="d-flex flex-column">
                   <Card.Title>{gym.properties.name}</Card.Title>
                   <Card.Text>{gym.properties.address_line2}</Card.Text>
                   <Card.Text>
-                    Aproximately {(gym.properties.distance / 1000).toFixed(2)}{" "}
+                    Aproximately {(gym.properties.distance / 1000).toFixed(2)}
                     km away from the location specified
                   </Card.Text>
 
@@ -112,7 +112,7 @@ export default function GymLocator({ title, setTitle }) {
                       )
                     }
                   >
-                    MAP
+                    View on Maps
                   </button>
                 </Card.Body>
               </Card>
