@@ -67,10 +67,11 @@ export default function Dropdowns({ completedForm, setCompletedForm }) {
 
   return (
     <div className="container-fluid">
-      <div className="row mt-4">
+      <div className="row mt-1">
         {/* dropdown for exercise */}
         <div className="col mt-4 text-center">
           <div className="exercise">
+            <p>Please select an exercise</p>
             <select value={selectedExercises} onChange={handleExerciseChange}>
               <option value="">Choose an Exercise</option>
               {Exercises.map((exercise, index) => (
@@ -81,20 +82,10 @@ export default function Dropdowns({ completedForm, setCompletedForm }) {
             </select>
           </div>
         </div>
-        {/* input field for weight */}
-        <div className="col mt-4 text-center">
-          <div className="Weight">
-            <input
-              type="number"
-              value={weight}
-              onChange={handleWeightChange}
-              placeholder="Enter Weight in kg"
-            />
-          </div>
-        </div>
         {/* dropdwon for the number of reps  */}
         <div className="col mt-4 text-center">
           <div className="Reps">
+          <p>Please input the number of reps you lift</p>
             <select value={selectedReps} onChange={handleRepsChange}>
               <option value="">Number of Reps</option>
               {Reps.map((rep, index) => (
@@ -104,6 +95,18 @@ export default function Dropdowns({ completedForm, setCompletedForm }) {
               ))}
             </select>
           </div>
+        </div>
+      </div>
+      {/* input field for weight */}
+      <div className="col mt-4 text-center">
+        <div className="Weight">
+          <p>Please input the weight you're able to lift for the reps specified</p>
+          <input
+            type="number"
+            value={weight}
+            onChange={handleWeightChange}
+            placeholder="Enter Weight in kg"
+          />
         </div>
       </div>
 

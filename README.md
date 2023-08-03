@@ -20,9 +20,18 @@ The app will use these inputs to generate a table showing the weight that is ata
 
 - Styling using CSS Bootstrap
 - Importing an Api for workout plans
-- Importing an Api to show local gyms
+- Begin version 2
 
-Updated 15/07/23
+## Completed tasks
+
+- API call for gym locations 
+- Calculatons based upon exercise and reps
+- Generic styling
+- Page routing
+- Responsive styling (between desktop and Phone)
+
+
+Updated 03/08/23
 
 ### Documentation
 
