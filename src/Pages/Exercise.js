@@ -16,7 +16,7 @@ export default function ExerciseSearch({ title, setTitle }) {
     <div className="container-fluid vw4">
       <div className="row">
         <div className="col mt-4 text-start">
-          <div style={{ width: "10vw" }}>
+          <div style={{ width: "15vw" }}>
             <HeaderLogo />
           </div>
         </div>

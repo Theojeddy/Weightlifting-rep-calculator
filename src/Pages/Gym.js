@@ -9,7 +9,7 @@ export default function GymLocator({ title, setTitle }) {
   const [address, setAddress] = useState("");
   const [error, setError] = useState(null);
   const [gymData, setGymData] = useState([]);
-  const [cardsRendered, setCardsRendered] = useState(0); // State to track the number of cards rendered
+  
 
   useEffect(() => {
     setTitle("Gym locator");
@@ -55,16 +55,12 @@ export default function GymLocator({ title, setTitle }) {
     }
   }
 
-  useEffect(() => {
-    // Update the count of cards rendered whenever gymData changes
-    setCardsRendered(gymData.length);
-  }, [gymData]);
 
   return (
     <div className="container-fluid vw4">
       <div className="row">
         <div className="col mt-4 text-start">
-          <div style={{ width: "10vw" }}>
+          <div style={{ width: "15vw" }}>
             <HeaderLogo />
           </div>
         </div>
@@ -75,49 +71,58 @@ export default function GymLocator({ title, setTitle }) {
           <HeaderHomeButton />
         </div>
       </div>
-      <div className="row mt-3">
+
+      <div className="row mt-3 justify-content-center">
         <input
           type="text"
+          style={{ width: "25rem" }}
           placeholder="Enter a Location, City, Address or Postcode "
           onChange={(e) => setAddress(e.target.value)}
         />
-        <button className="btn btn-primary" onClick={fetchGyms}>
+        <button
+          className="btn btn-primary"
+          onClick={fetchGyms}
+          style={{ width: "10rem" }}
+        >
           search
         </button>
       </div>
+
       <div className="row text-center">
         {error && <p className="text-danger">{error}</p>}
-        
-        <div className="row">
-          {gymData.map((gym, index) =>
-            gym.properties.name ? (
-              <Card key={index} style={{ width: "18rem" }} className="m-2">
-                <Card.Body className="d-flex flex-column">
-                  <Card.Title>{gym.properties.name}</Card.Title>
-                  <Card.Text>{gym.properties.address_line2}</Card.Text>
-                  <Card.Text>
-                    Aproximately {(gym.properties.distance / 1000).toFixed(2)}
-                    km away from the location specified
-                  </Card.Text>
 
-                  <button
-                    className="btn btn-primary mt-auto"
-                    style={{
-                      backgroundColor: "#10a7e6",
-                      borderColor: "#10a7e6",
-                    }}
-                    onClick={() =>
-                      window.open(
-                        `https://www.google.com/maps/search/?api=1&query=${gym.properties.address_line2}`
-                      )
-                    }
-                  >
-                    View on Maps
-                  </button>
-                </Card.Body>
-              </Card>
-            ) : null
-          )}
+        <div className="col text-center">
+          <div className="row justify-content-center">
+            {gymData.map((gym, index) =>
+              gym.properties.name ? (
+                <Card key={index} style={{ width: "18rem" }} className="m-2">
+                  <Card.Body className="d-flex flex-column">
+                    <Card.Title>{gym.properties.name}</Card.Title>
+                    <Card.Text>{gym.properties.address_line2}</Card.Text>
+                    <Card.Text>
+                      Aproximately {(gym.properties.distance / 1000).toFixed(2)}
+                      km away from the location specified
+                    </Card.Text>
+
+                    <button
+                      className="btn btn-primary mt-auto"
+                      style={{
+                        backgroundColor: "#10a7e6",
+                        borderColor: "#10a7e6",
+                      }}
+                      onClick={() =>
+                        window.open(
+                          `https://www.google.com/maps/search/?api=1&query=${gym.properties.address_line2}`
+                        )
+                      }
+                    >
+                      View on Maps
+                    </button>
+                  </Card.Body>
+                </Card>
+              ) : null
+            )}
+          </div>
         </div>
       </div>
     </div>
