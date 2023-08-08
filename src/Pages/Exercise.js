@@ -157,9 +157,11 @@ export default function ExerciseSearch({ title, setTitle }) {
 
       {/* start of content */}
       <div className="row">
-      <h5>Please select either the type of training or the muscle groups you'd like to exercise</h5>
+        <h5>
+          Please select either the type of training or the muscle groups you'd
+          like to exercise
+        </h5>
         <div className="col">
-          
           <select value={exerciseType} onChange={handleExerciseChange}>
             <option value="">Choose an Exercise</option>
             {Exercises.map((exercise, index) => (
@@ -169,9 +171,9 @@ export default function ExerciseSearch({ title, setTitle }) {
             ))}
           </select>
         </div>
+        <div className="text-center"> OR </div>
 
         <div className="col">
-          
           <select value={workingMuscle} onChange={handleMuscleChange}>
             <option value="">Select the muscle you wish to work</option>
             {Muscles.map((Muscle, index) => (
