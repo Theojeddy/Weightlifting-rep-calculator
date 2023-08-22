@@ -13,6 +13,7 @@ export default function Navbar() {
   const closeDropdown = () => {
     setShowDropdown(false);
   };
+
   return (
     <div>
       <nav
@@ -25,15 +26,13 @@ export default function Navbar() {
         <button
           className="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
+          onClick={toggleDropdown} 
+          aria-expanded={showDropdown}
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+        <div className={`collapse navbar-collapse ${showDropdown ? "show" : ""}`} id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item active">
               <Link className="nav-link" to="/GymLocator">
@@ -51,11 +50,9 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item dropdown">
-              {/* Dropdown */}
               <div className="container">
                 <ul className="navbar-nav">
                   <li className="nav-item dropdown">
-                    {/* Button for Dropdown */}
                     <Button
                       className="nav-link dropdown-toggle"
                       onClick={toggleDropdown}
@@ -63,7 +60,6 @@ export default function Navbar() {
                     >
                       Quick Workouts
                     </Button>
-                    {/* Dropdown content */}
                     <Dropdown show={showDropdown} onMouseLeave={closeDropdown}>
                       {showDropdown && (
                         <>
