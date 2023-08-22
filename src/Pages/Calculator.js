@@ -6,6 +6,7 @@ import HeaderHomeButton from "../Components/Header/HomeButton";
 import Calculations from "../Components/Calculations/Calculations";
 // import useEffect and useState
 import React, { useEffect, useState } from "react";
+import Navbar from "../Components/NavBar/navbar";
 
 export default function Calculator({ title, setTitle }) {
   // set up useState of completed form
@@ -22,6 +23,7 @@ console.log(completedForm);
   
   return (
     <div className="container-fluid vw4">
+    <Navbar title={title}/>
       <div className="row">
         <div className="col mt-4 text-start">
           <div style={{ width: "15vw" }}>
