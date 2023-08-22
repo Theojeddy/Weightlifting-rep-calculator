@@ -64,9 +64,15 @@ export default function Navbar() {
                     <Dropdown show={showDropdown} onMouseLeave={closeDropdown}>
                       {showDropdown && (
                         <>
-                          <Dropdown.Item>Leg Day</Dropdown.Item>
-                          <Dropdown.Item>Push Day</Dropdown.Item>
-                          <Dropdown.Item>Pull Day</Dropdown.Item>
+                          <Link to="/QuickWorkouts" className="dropdown-item">
+                            Leg Day
+                          </Link>
+                          <Link to="/QuickWorkouts" className="dropdown-item">
+                            Push Day
+                          </Link>
+                          <Link to="/QuickWorkouts" className="dropdown-item">
+                            Pull Day
+                          </Link>
                         </>
                       )}
                     </Dropdown>

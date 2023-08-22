@@ -1,5 +1,6 @@
 import Calculator from "../Pages/Calculator";
 import Home from "../Pages/Home";
+import QuickWorkouts from "../Pages/QuickWorkouts";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
@@ -32,6 +33,10 @@ function App() {
             <Route
               path="/ExerciseSearch"
               element={<ExerciseSearch title={title} setTitle={setTitle} />}
+            />
+            <Route
+              path="/QuickWorkouts"
+              element={<QuickWorkouts title={title} setTitle={setTitle} />}
             />
           </Routes>
         </BrowserRouter>
