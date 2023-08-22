@@ -1,11 +1,12 @@
 import HeaderLogo from "../Components/Header/HeaderLogo";
+import Navbar from "../Components/NavBar/navbar";
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import "bootstrap/dist/css/bootstrap.css";
 
 export default function Home({ title, setTitle }) {
   useEffect(() => {
-    setTitle("Home"); // Update the title using the setTitle function
+    setTitle("Home");
   }, [setTitle]);
 
   return (
@@ -17,32 +18,15 @@ export default function Home({ title, setTitle }) {
           </div>
         </div>
 
-        <div
-          className="col mt-4
-         text-center "
-        >
+        <div className="col mt-4 text-center ">
           <h1>{title}</h1>
         </div>
         <div className="col mt-4 "></div>
       </div>
 
-      <div className="col text-center">
-        <div className="row">
-          <Link to="/Calculator">
-            <button className="btn btn-primary">Calculator</button>
-          </Link>
-        </div>
-        <div className="row mt-3">
-          <Link to="/GymLocator">
-            <button className="btn btn-primary"> Gym Locator</button>
-          </Link>
-        </div>
-        <div className="row mt-3">
-          <Link to="/ExerciseSearch">
-            <button className="btn btn-primary"> Exercise Search</button>
-          </Link>
-        </div>
-      </div>
+      <Navbar/>
+     
+
     </div>
   );
 }
