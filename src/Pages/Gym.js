@@ -73,8 +73,10 @@ export default function GymLocator({ title, setTitle }) {
           placeholder="Enter a Location, City, Address or Postcode "
           onChange={(e) => setAddress(e.target.value)}
         />
+      </div>
+      <div className="row mt-3 justify-content-center">
         <button
-          className="btn btn-primary"
+          className="btn btn-primary mt-2"
           onClick={fetchGyms}
           style={{ width: "10rem" }}
         >
@@ -94,9 +96,8 @@ export default function GymLocator({ title, setTitle }) {
                     <Card.Title>{gym.properties.name}</Card.Title>
                     <Card.Text>{gym.properties.address_line2}</Card.Text>
                     <Card.Text>
-                      Approximately{" "}
-                      {(gym.properties.distance / 1000).toFixed(2)}
-                      km away from the specified location
+                      Distance : {(gym.properties.distance / 1000).toFixed(2)}{" "}
+                      km
                     </Card.Text>
 
                     <button
