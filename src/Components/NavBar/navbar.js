@@ -15,7 +15,10 @@ export default function Navbar() {
   };
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav
+        className="navbar navbar-expand-lg navbar-light"
+        style={{ backgroundColor: "#10a6e7" }}
+      >
         <Link className="navbar-brand" to="/">
           Home
         </Link>
