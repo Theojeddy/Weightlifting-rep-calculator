@@ -1,16 +1,19 @@
 import Calculator from "../Pages/Calculator";
 import Home from "../Pages/Home";
-import QuickWorkouts from "../Pages/QuickWorkouts";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import GymLocator from "../Pages/Gym";
 import ExerciseSearch from "../Pages/Exercise";
+import QWLegs from "../Pages/QWLegs";
+import QWPush from "../Pages/QWPush";
+import QWPull from "../Pages/QWPull";
 
 
 
 function App() {
   const [title, setTitle] = useState("Home")
+  const [QWSession, setQWsession] = useState("");
 
   
   return (
@@ -35,8 +38,37 @@ function App() {
               element={<ExerciseSearch title={title} setTitle={setTitle} />}
             />
             <Route
-              path="/QuickWorkouts"
-              element={<QuickWorkouts title={title} setTitle={setTitle} />}
+              path="/QWLegs"
+              element={
+                <QWLegs
+                  title={title}
+                  setTitle={setTitle}
+                  QWSession={QWSession}
+                  setQWsession={setQWsession}
+                />
+              }
+            />
+            <Route
+              path="/QWPush"
+              element={
+                <QWPush
+                  title={title}
+                  setTitle={setTitle}
+                  QWSession={QWSession}
+                  setQWsession={setQWsession}
+                />
+              }
+            />
+            <Route
+              path="/QWPull"
+              element={
+                <QWPull
+                  title={title}
+                  setTitle={setTitle}
+                  QWSession={QWSession}
+                  setQWsession={setQWsession}
+                />
+              }
             />
           </Routes>
         </BrowserRouter>

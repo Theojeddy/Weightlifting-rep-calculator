@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 export default function Navbar({title}) {
   const [showDropdown, setShowDropdown] = useState(false);
+  
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
@@ -13,6 +14,7 @@ export default function Navbar({title}) {
   const closeDropdown = () => {
     setShowDropdown(false);
   };
+  
 
   return (
     <div>
@@ -24,7 +26,7 @@ export default function Navbar({title}) {
           {" "}
           {/* Center-align container */}
           <Link className="navbar-brand ml-2" to="/">
-            {title}
+            Home
           </Link>
           <button
             className="navbar-toggler"
@@ -72,13 +74,25 @@ export default function Navbar({title}) {
                       >
                         {showDropdown && (
                           <>
-                            <Link to="/QuickWorkouts" className="dropdown-item">
+                            <Link
+                              to="/QWLegs"
+                              className="dropdown-item"
+                              
+                            >
                               Leg Day
                             </Link>
-                            <Link to="/QuickWorkouts" className="dropdown-item">
+                            <Link
+                              to="/QWPush"
+                              className="dropdown-item"
+                              
+                            >
                               Push Day
                             </Link>
-                            <Link to="/QuickWorkouts" className="dropdown-item">
+                            <Link
+                              to="/QWPull"
+                              className="dropdown-item"
+                            
+                            >
                               Pull Day
                             </Link>
                           </>

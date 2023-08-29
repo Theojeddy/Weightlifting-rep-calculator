@@ -1,12 +1,15 @@
 import HeaderLogo from "../Components/Header/HeaderLogo";
 import React, { useEffect } from "react";
 import Navbar from "../Components/NavBar/navbar";
+import Workout from "../Components/Workout call/WorkoutsCall";
 
-
-export default function QuickWorkouts({ title, setTitle }) {
+export default function QWPull({ title, setTitle, QWSession, setQWsession }) {
   useEffect(() => {
-    setTitle("Quick Workouts");
+    setTitle("Quick Pull Workouts");
   }, [setTitle]);
+  useEffect(() => {
+    setQWsession("Pull");
+  }, [setQWsession]);
   return (
     <div className="container-fluid vw4">
       <Navbar title={title} />
@@ -22,6 +25,7 @@ export default function QuickWorkouts({ title, setTitle }) {
         </div>
         <div className="col mt-4 "></div>
       </div>
+      <Workout QWSession={QWSession} setQWSession={setQWsession}/>
     </div>
   );
 }
