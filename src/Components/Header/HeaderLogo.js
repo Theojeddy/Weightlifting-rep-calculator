@@ -8,7 +8,7 @@ export default function HeaderLogo(){
 return (
   <Link to="/">
     <header>
-      <img src={logo1} alt="Logo" className="img-fluid" />
+      <img src={logo1} alt="" className="img-fluid" />
     </header>
   </Link>
 );};
