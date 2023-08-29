@@ -3,6 +3,7 @@ import HeaderLogo from "../Components/Header/HeaderLogo";
 import HeaderHomeButton from "../Components/Header/HomeButton";
 import { Card, Button } from "react-bootstrap";
 import Navbar from "../Components/NavBar/navbar";
+import "../App/App.css";
 
 export default function ExerciseSearch({ title, setTitle }) {
   const [exerciseType, setExerciseType] = useState("");
@@ -150,7 +151,7 @@ export default function ExerciseSearch({ title, setTitle }) {
           </div>
         </div>
         <div className="col mt-4 text-center ">
-          <h1>{title}</h1>
+          <h1 style={{ color: "var(--secondary-blue)" }}>{title}</h1>
         </div>
         <div className="col mt-4 text-end">
           <HeaderHomeButton />
@@ -239,8 +240,6 @@ export default function ExerciseSearch({ title, setTitle }) {
           </div>
         </div>
       </div>
-      
-      
     </div>
   );
 }

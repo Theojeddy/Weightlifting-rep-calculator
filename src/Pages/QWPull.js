@@ -2,6 +2,7 @@ import HeaderLogo from "../Components/Header/HeaderLogo";
 import React, { useEffect } from "react";
 import Navbar from "../Components/NavBar/navbar";
 import Workout from "../Components/Workout call/WorkoutsCall";
+import "../App/App.css";
 
 export default function QWPull({ title, setTitle, QWSession, setQWsession }) {
   useEffect(() => {
@@ -21,11 +22,11 @@ export default function QWPull({ title, setTitle, QWSession, setQWsession }) {
         </div>
 
         <div className="col mt-4 text-center ">
-          <h1>{title}</h1>
+          <h1 style={{ color: "var(--secondary-blue)" }}>{title}</h1>
         </div>
         <div className="col mt-4 "></div>
       </div>
-      <Workout QWSession={QWSession} setQWSession={setQWsession}/>
+      <Workout QWSession={QWSession} setQWSession={setQWsession} />
     </div>
   );
 }

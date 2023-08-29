@@ -1,5 +1,6 @@
 :root {
   --primary-blue: #10a7e6;
+  --secondary-blue: #ff9320;
   --primary-white: #ffffff;
   --primary-black: #000000;
 }
@@ -27,5 +28,7 @@
   color: var(--primary-black);
 }
 
-
+#title {
+  color: var(--secondary-blue);
+}
 

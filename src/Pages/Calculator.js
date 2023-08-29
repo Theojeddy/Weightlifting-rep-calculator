@@ -7,6 +7,7 @@ import Calculations from "../Components/Calculations/Calculations";
 // import useEffect and useState
 import React, { useEffect, useState } from "react";
 import Navbar from "../Components/NavBar/navbar";
+import "../App/App.css";
 
 export default function Calculator({ title, setTitle }) {
   // set up useState of completed form
@@ -23,7 +24,7 @@ console.log(completedForm);
   
   return (
     <div className="container-fluid vw4">
-    <Navbar title={title}/>
+      <Navbar title={title} />
       <div className="row">
         <div className="col mt-4 text-start">
           <div style={{ width: "15vw" }}>
@@ -34,14 +35,13 @@ console.log(completedForm);
           className="col mt-4
          text-center "
         >
-          <h1>{title}</h1>
+          <h1 style={{ color: "var(--secondary-blue)" }}>{title}</h1>
         </div>
         <div className="col mt-4 text-end">
           <HeaderHomeButton />
         </div>
       </div>
       {/* end for header row */}
-
 
       {/* start of page content */}
       {/* pass down props of completed form and handle form submit */}
