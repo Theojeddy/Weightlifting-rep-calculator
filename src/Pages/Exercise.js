@@ -187,30 +187,6 @@ export default function ExerciseSearch({ title, setTitle }) {
         </div>
       </div>
       <div className="col text-center mt-4">
-        <button className="btn btn-primary" onClick={fetchExercise}>
-          Submit
-        </button>
-      </div>
-      <div className="row text-center">
-        {error && <p className="text-danger">{error}</p>}
-        <div className="col text-center">
-          <div className="row justify-content-center">
-            {filteredContent.map((content, index) => (
-              <Card key={index} style={{ width: "18rem" }} className="m-2">
-                <Card.Body className="d-flex flex-column">
-                  <Card.Title>{content.name}</Card.Title>
-                  <Card.Text>Difficulty : {content.difficulty}</Card.Text>
-                  <Card.Text>Type: {content.type}</Card.Text>
-                  <Card.Text>Equipment required: {content.equipment}</Card.Text>
-                  <Card.Text>Instructions: {content.instructions}</Card.Text>
-                </Card.Body>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </div>
-      {/* Buttons to toggle difficulty */}
-      <div className="col text-center mt-4">
         <Button
           variant="primary"
           onClick={() => handleDifficultyToggle("all")}
@@ -240,6 +216,31 @@ export default function ExerciseSearch({ title, setTitle }) {
           Expert
         </Button>
       </div>
+      <div className="col text-center mt-4">
+        <button className="btn btn-primary" onClick={fetchExercise}>
+          Submit
+        </button>
+      </div>
+      <div className="row text-center">
+        {error && <p className="text-danger">{error}</p>}
+        <div className="col text-center">
+          <div className="row justify-content-center">
+            {filteredContent.map((content, index) => (
+              <Card key={index} style={{ width: "18rem" }} className="m-2">
+                <Card.Body className="d-flex flex-column">
+                  <Card.Title>{content.name}</Card.Title>
+                  <Card.Text>Difficulty : {content.difficulty}</Card.Text>
+                  <Card.Text>Type: {content.type}</Card.Text>
+                  <Card.Text>Equipment required: {content.equipment}</Card.Text>
+                  <Card.Text>Instructions: {content.instructions}</Card.Text>
+                </Card.Body>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+      
+      
     </div>
   );
 }
