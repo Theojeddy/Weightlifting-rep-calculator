@@ -1,6 +1,6 @@
 :root {
   --primary-blue: #10a7e6;
-  --secondary-blue: #ff9320;
+  --Title-orange: #F29559;
   --primary-white: #ffffff;
   --primary-black: #000000;
   --background-white: #F0F7F4;
@@ -15,7 +15,13 @@
   text-align: center;
 }
 
-
+.Title {
+  font-family: 'gill-sans-nova', 'sans-serif';
+  font-size: 2.5rem;
+  color: var(--Title-orange);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 
 
 .App-header {

@@ -22,7 +22,7 @@ export default function QWPull({ title, setTitle, QWSession, setQWsession }) {
         </div>
 
         <div className="col mt-4 text-center ">
-          <h1 style={{ color: "var(--secondary-blue)" }}>{title}</h1>
+          <h1 style={{ color: "var(--Title-orange)" }}>{title}</h1>
         </div>
         <div className="col mt-4 "></div>
       </div>

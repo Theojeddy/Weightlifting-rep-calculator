@@ -35,16 +35,12 @@ console.log(completedForm);
           className="col mt-4
          text-center "
         >
-          <h1 style={{ color: "var(--secondary-blue)" }}>{title}</h1>
+          <h1 style={{ color: "var(--Title-orange)" }}>{title}</h1>
         </div>
         <div className="col mt-4 text-end">
           <HeaderHomeButton />
         </div>
       </div>
-      {/* end for header row */}
-
-      {/* start of page content */}
-      {/* pass down props of completed form and handle form submit */}
 
       <Dropdowns
         completed={completedForm}
