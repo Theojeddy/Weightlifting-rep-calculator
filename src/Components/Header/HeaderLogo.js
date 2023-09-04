@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo1 from "../../App/RepWise-logo.svg";
+import logo1 from "../../App/RepWise-logologo.svg";
 
 import "bootstrap/dist/css/bootstrap.css";
 

@@ -17,7 +17,10 @@ function App() {
 
   
   return (
-    <div className="container-fluid custom-container">
+    <div
+      className="container-fluid custom-container"
+      style={{ background: "var(--background-white)" }}
+    >
       <div className="App">
         <BrowserRouter>
           <Routes>
