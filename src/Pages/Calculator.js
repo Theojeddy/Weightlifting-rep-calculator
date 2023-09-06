@@ -2,7 +2,6 @@
 
 import Dropdowns from "../Components/Dropdowns/Dropdown";
 import HeaderLogo from "../Components/Header/HeaderLogo";
-import HeaderHomeButton from "../Components/Header/HomeButton";
 import Calculations from "../Components/Calculations/Calculations";
 // import useEffect and useState
 import React, { useEffect, useState } from "react";
@@ -38,7 +37,7 @@ console.log(completedForm);
           <h1 style={{ color: "var(--Title-orange)" }}>{title}</h1>
         </div>
         <div className="col mt-4 text-end">
-          <HeaderHomeButton />
+         
         </div>
       </div>
 

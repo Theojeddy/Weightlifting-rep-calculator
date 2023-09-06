@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Card } from "react-bootstrap";
 import HeaderLogo from "../Components/Header/HeaderLogo";
-import HeaderHomeButton from "../Components/Header/HomeButton";
 import Navbar from "../Components/NavBar/navbar";
 import "../App/App.css";
 
@@ -65,7 +64,6 @@ export default function GymLocator({ title, setTitle }) {
           <h1 style={{ color: "var(--Title-orange)" }}>{title}</h1>
         </div>
         <div className="col mt-4 text-end">
-          <HeaderHomeButton />
         </div>
       </div>
 
