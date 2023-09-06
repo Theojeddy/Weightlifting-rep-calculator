@@ -52,7 +52,7 @@ export default function Home({ title, setTitle }) {
           </h5>
         </div>
       </div>
-      
+      {/* Carousel start */}
 
       <div className="row mt-4 pt-5"></div>
       <div className="row mt-1 pt5">

@@ -8,6 +8,7 @@ import ExerciseSearch from "../Pages/Exercise";
 import QWLegs from "../Pages/QWLegs";
 import QWPush from "../Pages/QWPush";
 import QWPull from "../Pages/QWPull";
+import TestPage from "../Pages/TestPage";
 
 
 
@@ -72,6 +73,10 @@ function App() {
                   setQWsession={setQWsession}
                 />
               }
+            />
+            <Route
+              path="/TestPage"
+              element={<TestPage title={title} setTitle={setTitle} />}
             />
           </Routes>
         </BrowserRouter>
