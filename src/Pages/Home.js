@@ -9,6 +9,8 @@ import MaddyProfile from "../Components/Team pictures/MaddyProfile";
 
 export default function Home({ title, setTitle }) {
   useEffect(() => {
+
+    
     setTitle("Home");
   }, [setTitle]);
 
