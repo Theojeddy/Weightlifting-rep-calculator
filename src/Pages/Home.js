@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.css";
 
 export default function Home({ title, setTitle }) {
   useEffect(() => {
+
+    
     setTitle("Home"); // Update the title using the setTitle function
   }, [setTitle]);
 
