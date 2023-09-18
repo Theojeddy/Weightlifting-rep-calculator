@@ -19,7 +19,7 @@ The app will use these inputs to generate a table showing the weight that is ata
 ## Currently Working On
 
 - Styling using CSS Bootstrap
-- Importing an Api for workout plans
+- width breakpoints for responsive styling
 - Begin version 2
 
 ## Completed tasks
@@ -28,10 +28,11 @@ The app will use these inputs to generate a table showing the weight that is ata
 - Calculatons based upon exercise and reps
 - Generic styling
 - Page routing
+- Importing an Api for workout plans
 - Responsive styling (between desktop and Phone)
 
 
-Updated 03/08/23
+Updated 18/09/23
 
 ### Documentation
 
