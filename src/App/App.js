@@ -14,7 +14,7 @@ import TestPage from "../Pages/TestPage";
 
 function App() {
   const [title, setTitle] = useState("Home")
-  const [QWSession, setQWsession] = useState("");
+  const [QWSession, setQWsession] = useState("Loading...");
 
   
   return (
