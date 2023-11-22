@@ -24,8 +24,8 @@ export default function Navbar({title}) {
       >
         <div className="container d-flex justify-content-center">
           {" "}
-          {/* Center-align container */}
-          <Link className="navbar-brand ml-2" to="/">
+         
+          <Link className="navbar-brand ml-2" to="/Home">
             Home
           </Link>
           <button

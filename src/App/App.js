@@ -9,6 +9,7 @@ import QWLegs from "../Pages/QWLegs";
 import QWPush from "../Pages/QWPush";
 import QWPull from "../Pages/QWPull";
 import TestPage from "../Pages/TestPage";
+import LandingPage from "../Pages/LandingPage";
 
 
 
@@ -27,6 +28,10 @@ function App() {
           <Routes>
             <Route
               path="/"
+              element={<LandingPage title={title} setTitle={setTitle} />}
+            />
+            <Route
+              path="/Home"
               element={<Home title={title} setTitle={setTitle} />}
             />
             <Route
