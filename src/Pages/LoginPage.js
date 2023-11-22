@@ -5,49 +5,44 @@ import "../App/App.css";
 
 import "bootstrap/dist/css/bootstrap.css";
 
-
-
-
-
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUp({ title, setTitle }) {
   // const [username, setUsername] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState(null);  
 
-  // const handleUsernameChange = (event) => {
-  //   setUsername(event.target.value);
-  // };
+  const navigate = useNavigate();
+  
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
-  const handleConfirmPasswordChange = (event) => {
-    setConfirmPassword(event.target.value);
-  };
+  
 
-  console.log(username)
-  console.log(password)
+  console.log(username);
+  console.log(password);
 
-   async function signUp() {
-      if (password === confirmPassword) {
-    const { data, error } = ({
-        username: username,
-        password: password,
-      });
-        console.log(data);
-        console.log(error);
-         return;
-      } else {
-         alert("Your passwords do not match");
-         return;
-      }
+ async function Login() {
+    const { error } = ({
+      username: username,
+      password: password,
+    });
+
+    // Handle the response
+    if (error) {
+      console.error("Error logging in:", error.message);
+      setError(error.message);
+    } else {
+      console.log("User logged in");
+      navigate("/Home", { replace: true });
+    //   setIsAuthenticated(true);
+      // Redirect user to the homepage after successful login
     }
+  }
 
   return (
     <div>
@@ -100,20 +95,9 @@ export default function SignUp({ title, setTitle }) {
                 onChange={handlePasswordChange}
               />
             </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">
-                Confirm Password
-              </label>
-              <input
-                type="password"
-                class="form-control"
-                id="floatingPassword1"
-                placeholder=" Confim Password"
-                onChange={handleConfirmPasswordChange}
-              />
-            </div>
+            
 
-            <button type="submit" class="btn btn-primary" onClick={signUp}>
+            <button type="submit" class="btn btn-primary" onClick={Login}>
               Sign Up
             </button>
           </form>
