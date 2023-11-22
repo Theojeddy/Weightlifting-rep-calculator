@@ -10,6 +10,7 @@ import QWPush from "../Pages/QWPush";
 import QWPull from "../Pages/QWPull";
 import TestPage from "../Pages/TestPage";
 import LandingPage from "../Pages/LandingPage";
+import SignUp from "../Pages/Signup";
 
 
 
@@ -29,6 +30,10 @@ function App() {
             <Route
               path="/"
               element={<LandingPage title={title} setTitle={setTitle} />}
+            />
+            <Route
+              path="/Signup"
+              element={<SignUp title={title} setTitle={setTitle} />}
             />
             <Route
               path="/Home"
