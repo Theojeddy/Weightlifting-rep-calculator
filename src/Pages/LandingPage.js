@@ -1,5 +1,5 @@
 import HeaderLogo from "../Components/Header/HeaderLogo";
-import Navbar from "../Components/NavBar/navbar";
+
 import React, { useEffect } from "react";
 import "../App/App.css";
 
@@ -13,7 +13,7 @@ export default function LandingPage({ title, setTitle }) {
 
   return (
     <div className="container-fluid vw4">
-      <Navbar title={title} />
+     
 
       <div className="row">
         <div className="col-2 mt-4 text-start d-flex flex-column">

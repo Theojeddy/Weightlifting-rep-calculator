@@ -12,12 +12,14 @@ import TestPage from "../Pages/TestPage";
 import LandingPage from "../Pages/LandingPage";
 import SignUp from "../Pages/Signup";
 import LoginPage from "../Pages/LoginPage"
+import Navbar from "../Components/NavBar/navbar";
 
 
 
 function App() {
   const [title, setTitle] = useState("Home")
   const [QWSession, setQWsession] = useState("");
+  const [authenticated, setAuthenticated] = useState(true)
 
   
   return (
@@ -27,6 +29,12 @@ function App() {
     >
       <div className="App">
         <BrowserRouter>
+          {authenticated && (
+            <div className="container-fluid vw4">
+              <Navbar title={title} setTitle={setTitle} />
+            </div>
+          )}
+
           <Routes>
             <Route
               path="/"
@@ -38,7 +46,8 @@ function App() {
             />
             <Route
               path="/LoginPage"
-              element={<LoginPage title={title} setTitle={setTitle} />}
+              element={<LoginPage title={title} setTitle={setTitle}
+              authenticated={authenticated} setAuthenticated={setAuthenticated} />}
             />
             <Route
               path="/Home"

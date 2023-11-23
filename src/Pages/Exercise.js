@@ -1,7 +1,7 @@
  import React, { useEffect, useState } from "react";
 import HeaderLogo from "../Components/Header/HeaderLogo";
 import { Card, Button } from "react-bootstrap";
-import Navbar from "../Components/NavBar/navbar";
+
 import "../App/App.css";
 
 export default function ExerciseSearch({ title, setTitle }) {
@@ -142,7 +142,7 @@ export default function ExerciseSearch({ title, setTitle }) {
 
   return (
     <div className="container-fluid vw4">
-      <Navbar title={title} />
+      
       <div className="row">
         <div className="col mt-4 text-start">
           <div style={{ width: "15vw" }}>

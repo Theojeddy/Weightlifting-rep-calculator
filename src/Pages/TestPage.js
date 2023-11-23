@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import HeaderLogo from "../Components/Header/HeaderLogo";
-import Navbar from "../Components/NavBar/navbar";
+
 import CalcCarousel from "../Components/CarouselImg/CalcIMG";
 import GLCarousel from "../Components/CarouselImg/GLIMG";
 import ESCarousel from "../Components/CarouselImg/ESIMG";
@@ -12,7 +12,7 @@ export default function TestPage({ title, setTitle }) {
   }, [setTitle]);
   return (
     <div className="container-fluid vw4">
-      <Navbar title={title} />
+      
 
       <div className="row">
         <div className="col-2 mt-4 text-start d-flex flex-column">

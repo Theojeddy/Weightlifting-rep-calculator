@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Card } from "react-bootstrap";
 import HeaderLogo from "../Components/Header/HeaderLogo";
-import Navbar from "../Components/NavBar/navbar";
+
 import "../App/App.css";
 
 export default function GymLocator({ title, setTitle }) {
@@ -53,7 +53,7 @@ export default function GymLocator({ title, setTitle }) {
 
   return (
     <div className="container-fluid vw4">
-      <Navbar title={title} />
+      
       <div className="row">
         <div className="col mt-4 text-start">
           <div style={{ width: "15vw" }}>

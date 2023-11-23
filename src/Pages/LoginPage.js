@@ -1,5 +1,5 @@
 import HeaderLogo from "../Components/Header/HeaderLogo";
-import Navbar from "../Components/NavBar/navbar";
+
 import React, { useState } from "react";
 import "../App/App.css";
 
@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import { Link, useNavigate } from "react-router-dom";
 
-export default function SignUp({ title, setTitle }) {
+export default function SignUp({ title, setTitle, authenticated, setAuthenticated }) {
   // const [username, setUsername] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -38,8 +38,8 @@ export default function SignUp({ title, setTitle }) {
       setError(error.message);
     } else {
       console.log("User logged in");
-      navigate("/Home", { replace: true });
-    //   setIsAuthenticated(true);
+      navigate("/Home");
+      setAuthenticated(true);
       // Redirect user to the homepage after successful login
     }
   }
@@ -47,7 +47,7 @@ export default function SignUp({ title, setTitle }) {
   return (
     <div>
       <div className="container-fluid vw4">
-        <Navbar title={title} />
+        
 
         <div className="row">
           <div className="col-2 mt-4 text-start d-flex flex-column">
