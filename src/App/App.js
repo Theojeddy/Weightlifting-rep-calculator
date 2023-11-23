@@ -19,7 +19,7 @@ import Navbar from "../Components/NavBar/navbar";
 function App() {
   const [title, setTitle] = useState("Home")
   const [QWSession, setQWsession] = useState("");
-  const [authenticated, setAuthenticated] = useState(true)
+  const [authenticated, setAuthenticated] = useState(false)
 
   
   return (
@@ -46,62 +46,72 @@ function App() {
             />
             <Route
               path="/LoginPage"
-              element={<LoginPage title={title} setTitle={setTitle}
-              authenticated={authenticated} setAuthenticated={setAuthenticated} />}
-            />
-            <Route
-              path="/Home"
-              element={<Home title={title} setTitle={setTitle} />}
-            />
-            <Route
-              path="/Calculator"
-              element={<Calculator title={title} setTitle={setTitle} />}
-            />
-            <Route
-              path="/GymLocator"
-              element={<GymLocator title={title} setTitle={setTitle} />}
-            />
-            <Route
-              path="/ExerciseSearch"
-              element={<ExerciseSearch title={title} setTitle={setTitle} />}
-            />
-            <Route
-              path="/QWLegs"
               element={
-                <QWLegs
+                <LoginPage
                   title={title}
                   setTitle={setTitle}
-                  QWSession={QWSession}
-                  setQWsession={setQWsession}
+                  authenticated={authenticated}
+                  setAuthenticated={setAuthenticated}
                 />
               }
             />
-            <Route
-              path="/QWPush"
-              element={
-                <QWPush
-                  title={title}
-                  setTitle={setTitle}
-                  QWSession={QWSession}
-                  setQWsession={setQWsession}
+            {authenticated && (
+              <div className="container-fluid vw4">
+                <Route
+                  path="/Home"
+                  element={<Home title={title} setTitle={setTitle} />}
                 />
-              }
-            />
-            <Route
-              path="/QWPull"
-              element={
-                <QWPull
-                  title={title}
-                  setTitle={setTitle}
-                  QWSession={QWSession}
-                  setQWsession={setQWsession}
+                <Route
+                  path="/Calculator"
+                  element={<Calculator title={title} setTitle={setTitle} />}
                 />
-              }
-            />
-            <Route
-              path="/TestPage"
-              element={<TestPage title={title} setTitle={setTitle} />}
-            />
+                <Route
+                  path="/GymLocator"
+                  element={<GymLocator title={title} setTitle={setTitle} />}
+                />
+                <Route
+                  path="/ExerciseSearch"
+                  element={<ExerciseSearch title={title} setTitle={setTitle} />}
+                />
+                <Route
+                  path="/QWLegs"
+                  element={
+                    <QWLegs
+                      title={title}
+                      setTitle={setTitle}
+                      QWSession={QWSession}
+                      setQWsession={setQWsession}
+                    />
+                  }
+                />
+                <Route
+                  path="/QWPush"
+                  element={
+                    <QWPush
+                      title={title}
+                      setTitle={setTitle}
+                      QWSession={QWSession}
+                      setQWsession={setQWsession}
+                    />
+                  }
+                />
+                <Route
+                  path="/QWPull"
+                  element={
+                    <QWPull
+                      title={title}
+                      setTitle={setTitle}
+                      QWSession={QWSession}
+                      setQWsession={setQWsession}
+                    />
+                  }
+                />
+                <Route
+                  path="/TestPage"
+                  element={<TestPage title={title} setTitle={setTitle} />}
+                />
+              </div>
+            )}
           </Routes>
         </BrowserRouter>
       </div>
