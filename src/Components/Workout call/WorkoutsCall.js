@@ -87,7 +87,7 @@ export default function Workout({ QWSession, setQWSession }) {
               <Card key={index} style={{ width: "18rem" }} className="m-2">
                 <Card.Body className="d-flex flex-column">
                   <Card.Title>{content.name}</Card.Title>
-                  <Card.Text>Difficulty : {content.difficulty}</Card.Text>
+                  <Card.Text>Difficulty: {content.difficulty}</Card.Text>
                   <Card.Text>Type: {content.type}</Card.Text>
                   <Card.Text>Equipment required: {content.equipment}</Card.Text>
                 </Card.Body>
@@ -99,7 +99,7 @@ export default function Workout({ QWSession, setQWSession }) {
               <Card key={index} style={{ width: "18rem" }} className="m-2">
                 <Card.Body className="d-flex flex-column">
                   <Card.Title>{content.name}</Card.Title>
-                  <Card.Text>Difficulty : {content.difficulty}</Card.Text>
+                  <Card.Text>Difficulty: {content.difficulty}</Card.Text>
                   <Card.Text>Type: {content.type}</Card.Text>
                   <Card.Text>Equipment required: {content.equipment}</Card.Text>
                 </Card.Body>
@@ -111,7 +111,7 @@ export default function Workout({ QWSession, setQWSession }) {
               <Card key={index} style={{ width: "18rem" }} className="m-2">
                 <Card.Body className="d-flex flex-column">
                   <Card.Title>{content.name}</Card.Title>
-                  <Card.Text>Difficulty : {content.difficulty}</Card.Text>
+                  <Card.Text>Difficulty: {content.difficulty}</Card.Text>
                   <Card.Text>Type: {content.type}</Card.Text>
                   <Card.Text>Equipment required: {content.equipment}</Card.Text>
                 </Card.Body>
@@ -123,7 +123,7 @@ export default function Workout({ QWSession, setQWSession }) {
               <Card key={index} style={{ width: "18rem" }} className="m-2">
                 <Card.Body className="d-flex flex-column">
                   <Card.Title>{content.name}</Card.Title>
-                  <Card.Text>Difficulty : {content.difficulty}</Card.Text>
+                  <Card.Text>Difficulty: {content.difficulty}</Card.Text>
                   <Card.Text>Type: {content.type}</Card.Text>
                   <Card.Text>Equipment required: {content.equipment}</Card.Text>
                 </Card.Body>
