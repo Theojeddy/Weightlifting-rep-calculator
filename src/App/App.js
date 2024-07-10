@@ -11,7 +11,7 @@ import QWPull from "../Pages/QWPull";
 import TestPage from "../Pages/TestPage";
 
 
-
+//Main App
 function App() {
   const [title, setTitle] = useState("Home")
   const [QWSession, setQWsession] = useState("Loading...");
