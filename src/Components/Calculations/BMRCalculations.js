@@ -41,6 +41,9 @@ export default function BMRCalc({ completed }) {
                 <Card.Body>
                   <Card.Title>BMR Calculation</Card.Title>
                   <Card.Text>Your Standard BMR is {BMR} kcal/day.</Card.Text>
+                  <Card.Text>
+                    This is the number of Kcal your body needs per day to acomplish basic life functions, such as breathing, blood circulation, cell production, ect.
+                  </Card.Text>
                 </Card.Body>
               </Card>
             </div>
