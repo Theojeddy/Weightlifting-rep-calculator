@@ -20,7 +20,7 @@ function App() {
   
   return (
     <div
-      className="container-fluid custom-container"
+      className="custom-container"
       style={{ background: "var(--background-white)" }}
     >
       <div className="App">

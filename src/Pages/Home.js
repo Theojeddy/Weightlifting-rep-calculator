@@ -13,7 +13,7 @@ export default function Home({ title, setTitle }) {
   }, [setTitle]);
 
   return (
-    <div className="container-fluid vw4">
+    <div className="custom-container">
       <Navbar title={title} />
 
       <div className="row">
@@ -84,32 +84,33 @@ export default function Home({ title, setTitle }) {
                 overcome!
               </p>
             </div>
-            
+
             <div className="col-10">
-            <div className="row mt-4"></div>
-          <div className="row">
-            <div className="col-6" style={{ width: "20vw" }}>
-              <MaddyProfile/>
-            </div>
-            <div className="col-6 text-start">
-              <h4>Hi, I'm Maddy!</h4>
-              <p>
-                I'm a law graduate and a part time UX designer. 
-                Having a busy schedule that means I spend alot of time away from home,
-                I regulary find myself having a few problems when it comes to working out:
-                Trying to find the closest gym to me; What my workout is going to be and trying
-                trying to work out how to do certian exercises. 
-                
-              </p>
-              <p>
-                So when I was told about Repwise, i wanted to get involved and make it as easy as possible to use
-                so other people could get as much out of it as i can!
-              </p>
-            </div>
+              <div className="row mt-4"></div>
+              <div className="row">
+                <div className="col-6" style={{ width: "20vw" }}>
+                  <MaddyProfile />
+                </div>
+                <div className="col-6 text-start">
+                  <h4>Hi, I'm Maddy!</h4>
+                  <p>
+                    I'm a law graduate and a part time UX designer. Having a
+                    busy schedule that means I spend alot of time away from
+                    home, I regulary find myself having a few problems when it
+                    comes to working out: Trying to find the closest gym to me;
+                    What my workout is going to be and trying trying to work out
+                    how to do certian exercises.
+                  </p>
+                  <p>
+                    So when I was told about Repwise, i wanted to get involved
+                    and make it as easy as possible to use so other people could
+                    get as much out of it as i can!
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );};

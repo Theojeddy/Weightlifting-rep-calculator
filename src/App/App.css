@@ -1,14 +1,15 @@
 :root {
   --primary-blue: #10a7e6;
-  --Title-orange: #F29559;
+  --Title-orange: #f29559;
   --primary-white: #ffffff;
   --primary-black: #000000;
-  --background-white: #F0F7F4;
+  --background-white: #f0f7f4;
 }
 
 .custom-container {
-  height: 97vh;
-  width: 97vw;
+  height: 100%;
+  width: 99%;
+
 }
 
 .App {
@@ -16,13 +17,12 @@
 }
 
 .Title {
-  font-family: 'gill-sans-nova', 'sans-serif';
+  font-family: "gill-sans-nova", "sans-serif";
   font-size: 2.5rem;
   color: var(--Title-orange);
   font-weight: bold;
   margin-bottom: 1rem;
 }
-
 
 .App-header {
   background-color: var(--primary-white);
@@ -38,4 +38,3 @@
 #title {
   color: var(--secondary-blue);
 }
-

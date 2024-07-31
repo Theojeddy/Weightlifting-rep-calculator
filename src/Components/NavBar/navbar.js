@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import { Button, Dropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 
-export default function Navbar({title}) {
+export default function Navbar({ title }) {
   const [showDropdown, setShowDropdown] = useState(false);
-  
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
@@ -14,7 +13,6 @@ export default function Navbar({title}) {
   const closeDropdown = () => {
     setShowDropdown(false);
   };
-  
 
   return (
     <div>
@@ -22,10 +20,9 @@ export default function Navbar({title}) {
         className="navbar navbar-expand-lg navbar-light"
         style={{ backgroundColor: "#10a6e7" }}
       >
-        <div className="container d-flex justify-content-center">
-          {" "}
-          {/* Center-align container */}
-          <Link className="navbar-brand ml-2" to="/">
+        <div className="container-fluid d-flex justify-content-between">
+          {/* Make the container fluid to span the full width */}
+          <Link className="navbar-brand ml-3" to="/">
             Home
           </Link>
           <button
@@ -63,37 +60,28 @@ export default function Navbar({title}) {
                 </Link>
               </li>
               <li className="nav-item dropdown">
-                <div className="container">
-                  <ul className="navbar-nav">
-                    <li className="nav-item dropdown">
-                      <Button
-                        className="nav-link dropdown-toggle"
-                        onClick={toggleDropdown}
-                        aria-expanded={showDropdown}
-                      >
-                        Quick Workouts
-                      </Button>
-                      <Dropdown
-                        show={showDropdown}
-                        onMouseLeave={closeDropdown}
-                      >
-                        {showDropdown && (
-                          <>
-                            <Link to="/QWLegs" className="dropdown-item">
-                              Leg Day
-                            </Link>
-                            <Link to="/QWPush" className="dropdown-item">
-                              Push Day
-                            </Link>
-                            <Link to="/QWPull" className="dropdown-item">
-                              Pull Day
-                            </Link>
-                          </>
-                        )}
-                      </Dropdown>
-                    </li>
-                  </ul>
-                </div>
+                <Button
+                  className="nav-link dropdown-toggle"
+                  onClick={toggleDropdown}
+                  aria-expanded={showDropdown}
+                >
+                  Quick Workouts
+                </Button>
+                <Dropdown show={showDropdown} onMouseLeave={closeDropdown}>
+                  {showDropdown && (
+                    <>
+                      <Link to="/QWLegs" className="dropdown-item">
+                        Leg Day
+                      </Link>
+                      <Link to="/QWPush" className="dropdown-item">
+                        Push Day
+                      </Link>
+                      <Link to="/QWPull" className="dropdown-item">
+                        Pull Day
+                      </Link>
+                    </>
+                  )}
+                </Dropdown>
               </li>
             </ul>
           </div>
