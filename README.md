@@ -18,11 +18,19 @@ The app will use these inputs to generate a table showing the weight that is ata
 
 ## Currently Working On
 
-- Styling using CSS Bootstrap
-- width breakpoints for responsive styling
-- Begin version 2
+- New page for BMR
+- Information on nutrition
+- Add Links to Products.
 
-## Completed tasks
+
+## Repwise Version 1 Content
+
+ - Gym Locator
+ - Quick Workouts
+ - Exercise search
+ - Rep Calculator
+
+## Main Tasks Completed for V1
 
 - API call for gym locations 
 - Calculatons based upon exercise and reps
@@ -31,17 +39,10 @@ The app will use these inputs to generate a table showing the weight that is ata
 - Importing an Api for workout plans
 - Responsive styling (between desktop and Phone)
 - Styling using CSS Bootstrap
+- Tagged and released version 1
 
-
-Updated 18/09/23
+Updated 31/07/24
 
 ### Documentation
 
-Open [Notion Docs](https://theo-eddy.notion.site/RepWise-v1-18d54323270448cb8eddea2038130522?pvs=4) to view the accompanying documentation
-
-## Current Plans
-
-- tag version 1
-- Start version 2
-- Add BMR
-- add links to informed sport for tested products
+Open [Notion Docs](https://theo-eddy.notion.site/RepWise-v1-18d54323270448cb8eddea2038130522?pvs=4) to view the accompanying documentation.
