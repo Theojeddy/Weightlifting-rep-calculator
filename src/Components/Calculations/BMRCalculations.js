@@ -25,24 +25,103 @@ export default function BMRCalc({ completed }) {
   const BMR = calculateBMR();
 
   return (
-      <div className="text-center">
-        {BMR !== null && (
-          <div>
+    <div className="text-center">
+      {BMR !== null && (
+        <div>
+          <div className="row">
             <h1>Height: {height} cm</h1>
             <h1>Weight: {weight} kg</h1>
             <h1>Age: {age}</h1>
             <h1>Sex: {sex}</h1>
-            
+          </div>
+
+          <div className="row">
             <div className="d-flex justify-content-center mb-5">
               <Card style={{ width: "18rem" }} className="m-2 mx-auto">
                 <Card.Body>
                   <Card.Title>BMR Calculation</Card.Title>
-                  <Card.Text>Your BMR is {BMR} kcal/day.</Card.Text>
+                  <Card.Text>Your Standard BMR is {BMR} kcal/day.</Card.Text>
                 </Card.Body>
               </Card>
             </div>
           </div>
-        )}
-      </div>
-    );
+          <div className="row">
+            <div className="col-md-3 justify-content-center d-flex mb-5">
+              <Card style={{ width: "18rem" }} className="m-2 mx-auto">
+                <Card.Body>
+                  <Card.Title>BMR Calculation</Card.Title>
+                  <Card.Text>
+                    Your BMR with a sedentary lifestyle is {BMR * 1.2} kcal/day.
+                  </Card.Text>
+                  <Card.Text>
+                    People who work desk jobs and engage in very little exercise
+                    or chores.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="col-md-3 justify-content-center d-flex mb-5">
+              <Card style={{ width: "18rem" }} className="m-2 mx-auto">
+                <Card.Body>
+                  <Card.Title>BMR Calculation</Card.Title>
+                  <Card.Text>
+                    Your BMR with a lightly active lifestyle is {BMR * 1.375}{" "}
+                    kcal/day.
+                  </Card.Text>
+                  <Card.Text>
+                    People who do chores and go on long walks/engage in exercise
+                    at least 1 to 3 days in a week.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="col-md-3 justify-content-center d-flex mb-5">
+              <Card style={{ width: "18rem" }} className="m-2 mx-auto">
+                <Card.Body>
+                  <Card.Title>BMR Calculation</Card.Title>
+                  <Card.Text>
+                    Your BMR with a moderatly active lifestyle is {BMR * 1.55}{" "}
+                    kcal/day.
+                  </Card.Text>
+                  <Card.Text>
+                    People who move a lot during the day and workout (moderate
+                    effort) at least 3 to 5 days in a week.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="col-md-3 justify-content-center d-flex mb-5">
+              <Card style={{ width: "18rem" }} className="m-2 mx-auto">
+                <Card.Body>
+                  <Card.Title>BMR Calculation</Card.Title>
+                  <Card.Text>
+                    Your BMR with a very active lifestyle is {BMR * 1.725}{" "}
+                    kcal/day.
+                  </Card.Text>
+                  <Card.Text>
+                    People who play sports or engage in vigorous exercise on
+                    most days.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="col-md-3 justify-content-center d-flex mb-5">
+              <Card style={{ width: "18rem" }} className="m-1 mx-auto">
+                <Card.Body>
+                  <Card.Title>BMR Calculation</Card.Title>
+                  <Card.Text>
+                    Your BMR with a lifestyle is {BMR * 1.9} kcal/day.
+                  </Card.Text>
+                  <Card.Text>
+                    People who do intense workouts 6 to 7 days a week with work
+                    that demands physical activity.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
