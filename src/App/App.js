@@ -9,6 +9,7 @@ import QWLegs from "../Pages/QWLegs";
 import QWPush from "../Pages/QWPush";
 import QWPull from "../Pages/QWPull";
 import TestPage from "../Pages/TestPage";
+import BMRCalculator from "../Pages/NutritionCalculator";
 
 
 //Main App
@@ -73,6 +74,10 @@ function App() {
                   setQWsession={setQWsession}
                 />
               }
+            />
+            <Route
+              path="/BMRCalculator"
+              element={<BMRCalculator title={title} setTitle={setTitle} />}
             />
             <Route
               path="/TestPage"

@@ -53,6 +53,11 @@ export default function Navbar({title}) {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to="/BMRCalculator">
+                  BMR Calculator
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/ExerciseSearch">
                   Exercise Search
                 </Link>
@@ -74,25 +79,13 @@ export default function Navbar({title}) {
                       >
                         {showDropdown && (
                           <>
-                            <Link
-                              to="/QWLegs"
-                              className="dropdown-item"
-                              
-                            >
+                            <Link to="/QWLegs" className="dropdown-item">
                               Leg Day
                             </Link>
-                            <Link
-                              to="/QWPush"
-                              className="dropdown-item"
-                              
-                            >
+                            <Link to="/QWPush" className="dropdown-item">
                               Push Day
                             </Link>
-                            <Link
-                              to="/QWPull"
-                              className="dropdown-item"
-                            
-                            >
+                            <Link to="/QWPull" className="dropdown-item">
                               Pull Day
                             </Link>
                           </>

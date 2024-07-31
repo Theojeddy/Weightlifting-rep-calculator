@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 
 // export function with props of completed form and setcompleted form from calculator.js
-export default function Dropdowns({ completedForm, setCompletedForm }) {
+export default function LiftingDropdowns({ completedForm, setCompletedForm }) {
   //set useState for exercise
   const [selectedExercises, setSelectedExercises] = useState("");
   //set useState for weight

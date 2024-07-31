@@ -1,19 +1,19 @@
 //import components dropdowns, header and calculations
 
-import Dropdowns from "../Components/Dropdowns/LiftingDropdown";
+import BMRDropdowns from "../Components/Dropdowns/BMRDropdowns";
 import HeaderLogo from "../Components/Header/HeaderLogo";
-import Calculations from "../Components/Calculations/Calculations";
+import BMRCalc from "../Components/Calculations/BMRCalculations";
 // import useEffect and useState
 import React, { useEffect, useState } from "react";
 import Navbar from "../Components/NavBar/navbar";
 import "../App/App.css";
 
-export default function Calculator({ title, setTitle }) {
+export default function BMRCalculator({ title, setTitle }) {
   // set up useState of completed form
   const [completedForm, setCompletedForm] = useState({});
   //set up useEffect to change the title to calculator
   useEffect(() => {
-    setTitle("Calculator");
+    setTitle(" BMR Calculator");
   }, [setTitle]);
   // handle submit to update the value of completed form
   const handleFormSubmit = (formData) => {
@@ -38,13 +38,24 @@ export default function Calculator({ title, setTitle }) {
         </div>
         <div className="col mt-4 text-end"></div>
       </div>
+      <div className="text-center">
+        <h5>
+          This Calculator uses the formula from Basal Metabolic Rate, Mifflin St
+          Jeor Equation
+        </h5>
+        <h6>
+          Pawlik, K. and Mucha, M. and Rain, R. BMR Calculator (Basal Metabolic
+          Rate, Mifflin St Jeor Equation). Available at:
+          https://www.omnicalculator.com/health/bmr. Accessed: Jul 31, 2024.
+        </h6>
+      </div>
 
-      <Dropdowns
+      <BMRDropdowns
         completed={completedForm}
         setCompletedForm={handleFormSubmit}
       />
       {/* pass down the updated props of completed form */}
-      <Calculations completed={completedForm} />
+      <BMRCalc completed={completedForm} />
     </div>
   );
 }
