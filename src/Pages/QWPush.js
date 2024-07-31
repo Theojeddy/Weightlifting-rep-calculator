@@ -14,7 +14,7 @@ export default function QWPush({ title, setTitle, QWSession, setQWsession }) {
   }, [setQWsession]);
 
   return (
-    <div className="container-fluid vw4">
+    <div className="custom-container">
       <Navbar title={title} />
       <div className="row">
         <div className="col mt-4 text-start">

@@ -3,7 +3,7 @@
   --Title-orange: #f29559;
   --primary-white: #ffffff;
   --primary-black: #000000;
-  --background-white: #f0f7f4;
+  --background-white: #f0f7f4;;
 }
 
 .custom-container {
@@ -26,7 +26,7 @@
 
 .App-header {
   background-color: var(--primary-white);
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -52,7 +52,7 @@ export default function GymLocator({ title, setTitle }) {
   }
 
   return (
-    <div className="container-fluid vw4">
+    <div className="custom-container">
       <Navbar title={title} />
       <div className="row">
         <div className="col mt-4 text-start">
@@ -63,8 +63,7 @@ export default function GymLocator({ title, setTitle }) {
         <div className="col mt-4 text-center ">
           <h1 style={{ color: "var(--Title-orange)" }}>{title}</h1>
         </div>
-        <div className="col mt-4 text-end">
-        </div>
+        <div className="col mt-4 text-end"></div>
       </div>
 
       <div className="row mt-3 justify-content-center">

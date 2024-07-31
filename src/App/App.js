@@ -21,7 +21,7 @@ function App() {
   return (
     <div
       className="custom-container"
-      style={{ background: "var(--background-white)" }}
+      style={{ background: "var(--background-white)", height: "100%", }}
     >
       <div className="App">
         <BrowserRouter>

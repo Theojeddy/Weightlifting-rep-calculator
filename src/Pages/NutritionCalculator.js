@@ -22,7 +22,7 @@ export default function BMRCalculator({ title, setTitle }) {
   console.log(completedForm);
 
   return (
-    <div className="container-fluid vw4">
+    <div className="custom-container ">
       <Navbar title={title} />
       <div className="row">
         <div className="col mt-4 text-start">

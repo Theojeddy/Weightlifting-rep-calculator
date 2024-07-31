@@ -141,7 +141,7 @@ export default function ExerciseSearch({ title, setTitle }) {
   });
 
   return (
-    <div className="container-fluid vw4">
+    <div className="custom-container ">
       <Navbar title={title} />
       <div className="row">
         <div className="col mt-4 text-start">
@@ -152,9 +152,7 @@ export default function ExerciseSearch({ title, setTitle }) {
         <div className="col mt-4 text-center ">
           <h1 style={{ color: "var(--Title-orange)" }}>{title}</h1>
         </div>
-        <div className="col mt-4 text-end">
-      
-        </div>
+        <div className="col mt-4 text-end"></div>
       </div>
 
       {/* start of content */}
