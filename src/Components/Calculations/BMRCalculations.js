@@ -42,7 +42,9 @@ export default function BMRCalc({ completed }) {
                   <Card.Title>BMR Calculation</Card.Title>
                   <Card.Text>Your Standard BMR is {BMR} kcal/day.</Card.Text>
                   <Card.Text>
-                    This is the number of Kcal your body needs per day to acomplish basic life functions, such as breathing, blood circulation, cell production, ect.
+                    This is the number of Kcal your body needs per day to
+                    acomplish basic life functions, such as breathing, blood
+                    circulation, cell production, ect.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -52,7 +54,7 @@ export default function BMRCalc({ completed }) {
             <div className="col-md-3 justify-content-center d-flex mb-5">
               <Card style={{ width: "18rem" }} className="m-2 mx-auto">
                 <Card.Body>
-                  <Card.Title>BMR Calculation</Card.Title>
+                  <Card.Title>Sedentary lifestyle BMR Calculation</Card.Title>
                   <Card.Text>
                     Your BMR with a sedentary lifestyle is {BMR * 1.2} kcal/day.
                   </Card.Text>
@@ -66,7 +68,9 @@ export default function BMRCalc({ completed }) {
             <div className="col-md-3 justify-content-center d-flex mb-5">
               <Card style={{ width: "18rem" }} className="m-2 mx-auto">
                 <Card.Body>
-                  <Card.Title>BMR Calculation</Card.Title>
+                  <Card.Title>
+                    Lightly Active lifestyle BMR Calculation
+                  </Card.Title>
                   <Card.Text>
                     Your BMR with a lightly active lifestyle is {BMR * 1.375}{" "}
                     kcal/day.
@@ -81,7 +85,9 @@ export default function BMRCalc({ completed }) {
             <div className="col-md-3 justify-content-center d-flex mb-5">
               <Card style={{ width: "18rem" }} className="m-2 mx-auto">
                 <Card.Body>
-                  <Card.Title>BMR Calculation</Card.Title>
+                  <Card.Title>
+                    Moderatly active lifestyle BMR Calculation
+                  </Card.Title>
                   <Card.Text>
                     Your BMR with a moderatly active lifestyle is {BMR * 1.55}{" "}
                     kcal/day.
@@ -96,7 +102,7 @@ export default function BMRCalc({ completed }) {
             <div className="col-md-3 justify-content-center d-flex mb-5">
               <Card style={{ width: "18rem" }} className="m-2 mx-auto">
                 <Card.Body>
-                  <Card.Title>BMR Calculation</Card.Title>
+                  <Card.Title>Very Active lifestyle BMR Calculation</Card.Title>
                   <Card.Text>
                     Your BMR with a very active lifestyle is {BMR * 1.725}{" "}
                     kcal/day.
@@ -111,9 +117,11 @@ export default function BMRCalc({ completed }) {
             <div className="col-md-3 justify-content-center d-flex mb-5">
               <Card style={{ width: "18rem" }} className="m-1 mx-auto">
                 <Card.Body>
-                  <Card.Title>BMR Calculation</Card.Title>
+                  <Card.Title>
+                    Extremely Active lifestyle BMR Calculation
+                  </Card.Title>
                   <Card.Text>
-                    Your BMR with a lifestyle is {BMR * 1.9} kcal/day.
+                    Your BMR with a Extremely Active lifestyle is {BMR * 1.9} kcal/day.
                   </Card.Text>
                   <Card.Text>
                     People who do intense workouts 6 to 7 days a week with work
