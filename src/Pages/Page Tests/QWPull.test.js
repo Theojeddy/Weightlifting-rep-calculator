@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import QWLegs from "../QWLegs";
+import QWPull from "../QWPull";
 
-// Mock components that QWLegs depends on
+// Mock components that QWPull depends on
 jest.mock("../../Components/Header/HeaderLogo", () => () => (
   <div data-testid="header-logo" />
 ));
@@ -16,7 +16,7 @@ jest.mock(
       <div data-testid="workout">{QWSession}</div>
 );
 
-describe("QWLegs Component", () => {
+describe("QWPull Component", () => {
   let mockSetTitle, mockSetQWsession;
 
   beforeEach(() => {
@@ -24,9 +24,9 @@ describe("QWLegs Component", () => {
     mockSetQWsession = jest.fn();
   });
 
-  test('sets the title to "Quick Leg Workouts" on mount', () => {
+  test('sets the title to "Quick Pull Workouts" on mount', () => {
     render(
-      <QWLegs
+      <QWPull
         title=""
         setTitle={mockSetTitle}
         QWSession=""
@@ -35,13 +35,13 @@ describe("QWLegs Component", () => {
     );
 
     // Check that setTitle was called with the correct argument
-    expect(mockSetTitle).toHaveBeenCalledWith("Quick Leg Workouts");
+    expect(mockSetTitle).toHaveBeenCalledWith("Quick Pull Workouts");
     expect(mockSetTitle).toHaveBeenCalledTimes(1);
   });
 
-  test('sets the session to "legs" on mount', () => {
+  test('sets the session to "Pull" on mount', () => {
     render(
-      <QWLegs
+      <QWPull
         title=""
         setTitle={mockSetTitle}
         QWSession=""
@@ -50,14 +50,14 @@ describe("QWLegs Component", () => {
     );
 
     // Check that setQWsession was called with the correct argument
-    expect(mockSetQWsession).toHaveBeenCalledWith("legs");
+    expect(mockSetQWsession).toHaveBeenCalledWith("Pull");
     expect(mockSetQWsession).toHaveBeenCalledTimes(1);
   });
 
   test("renders the Navbar with the correct title", () => {
-    const title = "Quick Leg Workouts";
+    const title = "Quick Pull Workouts";
     render(
-      <QWLegs
+      <QWPull
         title={title}
         setTitle={mockSetTitle}
         QWSession=""
@@ -71,7 +71,7 @@ describe("QWLegs Component", () => {
 
   test("renders the HeaderLogo component", () => {
     render(
-      <QWLegs
+      <QWPull
         title=""
         setTitle={mockSetTitle}
         QWSession=""
@@ -84,9 +84,9 @@ describe("QWLegs Component", () => {
   });
 
   test("renders the Workout component with the correct session", () => {
-    const session = "legs";
+    const session = "Pull";
     render(
-      <QWLegs
+      <QWPull
         title=""
         setTitle={mockSetTitle}
         QWSession={session}

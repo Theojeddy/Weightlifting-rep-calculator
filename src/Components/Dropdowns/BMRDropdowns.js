@@ -49,7 +49,7 @@ export default function BMRDropdowns({ completedForm, setCompletedForm }) {
     <div className="container-fluid">
       <div className="row mt-1">
         <div className="col mt-4 text-center">
-          <div className="Height">
+          <div id="height-input">
             <p>Please input your height in centimeters.</p>
             <input
               type="number"
@@ -60,7 +60,7 @@ export default function BMRDropdowns({ completedForm, setCompletedForm }) {
           </div>
         </div>
         <div className="col mt-4 text-center">
-          <div className="Age">
+          <div id="age-input">
             <p>Please input your age in years.</p>
             <input
               type="number"
@@ -71,7 +71,7 @@ export default function BMRDropdowns({ completedForm, setCompletedForm }) {
           </div>
         </div>
         <div className="col mt-4 text-center">
-          <div className="Weight">
+          <div id="weight-input">
             <p>Please input your body weight in kg.</p>
             <input
               type="number"
@@ -82,7 +82,7 @@ export default function BMRDropdowns({ completedForm, setCompletedForm }) {
           </div>
         </div>
         <div className="col mt-4 text-center">
-          <div className="Sex">
+          <div id="sex-input">
             <p>Please select your sex.</p>
             <select value={selectedSex} onChange={handleSexChange}>
               <option value="">Select your Sex</option>

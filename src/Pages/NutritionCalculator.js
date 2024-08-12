@@ -13,7 +13,7 @@ export default function BMRCalculator({ title, setTitle }) {
   const [completedForm, setCompletedForm] = useState({});
   //set up useEffect to change the title to calculator
   useEffect(() => {
-    setTitle(" BMR Calculator");
+    setTitle("BMR Calculator");
   }, [setTitle]);
   // handle submit to update the value of completed form
   const handleFormSubmit = (formData) => {
