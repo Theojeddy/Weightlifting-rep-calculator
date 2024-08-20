@@ -10,6 +10,7 @@ import QWPush from "../Pages/QWPush";
 import QWPull from "../Pages/QWPull";
 import TestPage from "../Pages/TestPage";
 import BMRCalculator from "../Pages/NutritionCalculator";
+import AboutUs from "../Pages/AboutUs";
 
 
 //Main App
@@ -21,7 +22,7 @@ function App() {
   return (
     <div
       className="custom-container"
-      style={{ background: "var(--background-white)", height: "100%", }}
+      style={{ background: "var(--background-white)", height: "100%" }}
     >
       <div className="App">
         <BrowserRouter>
@@ -29,6 +30,10 @@ function App() {
             <Route
               path="/"
               element={<Home title={title} setTitle={setTitle} />}
+            />
+            <Route
+              path="/AboutUs"
+              element={<AboutUs title={title} setTitle={setTitle} />}
             />
             <Route
               path="/Calculator"

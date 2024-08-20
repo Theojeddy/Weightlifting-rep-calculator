@@ -40,6 +40,11 @@ export default function Navbar({ title }) {
           >
             <ul className="navbar-nav">
               <li className="nav-item active">
+                <Link className="nav-link" to="/AboutUs">
+                  About Us
+                </Link>
+              </li>
+              <li className="nav-item active">
                 <Link className="nav-link" to="/GymLocator">
                   Gym Locator
                 </Link>
